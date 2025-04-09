@@ -1,25 +1,27 @@
-const messages = [
-    "Are you sure?",
-    "Really sure??",
-    "Really?",
-    "Say yes na...",
-    "Just think about it!",
-    "Don't say no, I am really hungry...",
-    "I am hungryyyyyyyyy...",
-    "I am so so so so so hungry...",
-    "Ok fine, I will stop asking...",
-    "Just kidding, say yes please!!! "
+const responses = [
+    "You sure about that?",
+    "Positive??",
+    "Think again...",
+    "Come on, say yes!",
+    "Let’s not rush the decision...",
+    "I'm seriously starving here!",
+    "Huuuungryyy....",
+    "Like, *really* hungry!",
+    "Alright, I’ll stop bothering you...",
+    "Haha, just kidding! Please say yes 😅"
 ];
 
-let messageIndex = 0;
+let responseCounter = 0;
 
 function handleNoClick() {
-    const noButton = document.querySelector('.no-button');
-    const yesButton = document.querySelector('.yes-button');
-    noButton.textContent = messages[messageIndex];
-    messageIndex = (messageIndex + 1) % messages.length;
-    const currentSize = parseFloat(window.getComputedStyle(yesButton).fontSize);
-    yesButton.style.fontSize = `${currentSize * 1.5}px`;
+    const noBtn = document.querySelector('.no-button');
+    const yesBtn = document.querySelector('.yes-button');
+
+    noBtn.textContent = responses[responseCounter];
+    responseCounter = (responseCounter + 1) % responses.length;
+
+    const currentFontSize = parseFloat(window.getComputedStyle(yesBtn).fontSize);
+    yesBtn.style.fontSize = `${currentFontSize * 1.5}px`;
 }
 
 function handleYesClick() {

@@ -4,8 +4,8 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #fff;
-    font-family: 'Arial', sans-serif;
+    background-color: #fefae0; /* soft warm cream */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .container {
@@ -13,12 +13,28 @@ body {
 }
 
 .header_text {
-    font-size: 3em;
-    color: #795548; /* chocolate brown */
+    font-size: 3.2em;
+    color: #6d4c41; /* deep mocha */
+    margin-bottom: 30px;
+    animation: popIn 1s ease-out;
 }
 
 .gif_container img {
     width: 100%;
-    max-width: 500px;
+    max-width: 480px;
     height: auto;
+    border-radius: 12px;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Smooth entrance animation */
+@keyframes popIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
